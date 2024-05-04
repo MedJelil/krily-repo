@@ -1,0 +1,84 @@
+import React from "react";
+import styles from "../styles/styles.module.css";
+import RadioButtons from "../components/RadioButtons";
+
+const Login = () => {
+  return (
+    <div className={styles.container}>
+      <div className={`max-w-lg w-full`}>
+        <div
+          className={`bg-gray-800 rounded-lg shadow-xl overflow-hidden ${styles.box}`}
+        >
+          <div className="p-8">
+            <h2 className="text-center text-3xl font-extrabold text-white">
+              Bienvenue
+            </h2>
+            <p className="mt-4 text-center text-gray-400">
+              Connecter-vous Pour Continuer
+            </p>
+            <form method="POST" action="#" className="mt-8 space-y-6">
+              
+              <div className="rounded-md shadow-sm">
+                <div>
+                  <label className="sr-only" htmlFor="email">
+                    Numero du telephone
+                  </label>
+                  <input
+                    placeholder="Numero Du Telephone"
+                    className={`appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm ${styles.inputNumber}`}
+                    type="number"
+                    name="telephone"
+                    id="telephone"
+                  />
+                </div>
+                <div className="mt-4">
+                  <label className="sr-only" htmlFor="password">
+                    Mot de pass
+                  </label>
+                  <input
+                    placeholder="Mot De Pass"
+                    className="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    type="password"
+                    name="password"
+                    id="password"
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mt-4">
+                <div className="text-sm">
+                  <a
+                    className="font-medium text-indigo-500 hover:text-indigo-400"
+                    href="#"
+                  >
+                    Mot de pass oublié?
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <button
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-gray-900 bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  type="submit"
+                >
+                  Connecter
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className="px-8 py-4 bg-gray-700 text-center">
+            <span className="text-gray-400">Je n'ai pas de compte?</span>
+            <a
+              className="font-medium text-indigo-500 hover:text-indigo-400"
+              href="Signup"
+            >
+              Enregistrer
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Login;
